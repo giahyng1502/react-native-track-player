@@ -760,10 +760,15 @@ class MusicService : HeadlessJsTaskService() {
         return HeadlessJsTaskConfig(TASK_KEY, Arguments.createMap(), 0, true)
     }
 
-    @MainThread
-    override fun onBind(intent: Intent): IBinder {
-        return binder
-    }
+//    @MainThread
+//    override fun onBind(intent: Intent?): IBinder? {
+//        val intentAction = intent?.action
+//        return if (intentAction != null) {
+//            super.onBind(intent)
+//        } else {
+//            binder
+//        }
+//    }
 
     @MainThread
     override fun onTaskRemoved(rootIntent: Intent?) {
